@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="HIIT.TimerPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HIIT">
+
+    <StackLayout BackgroundColor="{StaticResource BG}">
+
+        <Label
+            x:Name="Time"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="00:00:00"
+            TextColor="{StaticResource LightFG}"
+            VerticalOptions="CenterAndExpand" />
+
+        <Frame
+            x:Name="Card"
+            Padding="0,79,0,80"
+            BackgroundColor="{StaticResource DarkBG}"
+            CornerRadius="20"
+            VerticalOptions="StartAndExpand">
+
+            <StackLayout>
+                <Label
+                    x:Name="TimeLeft"
+                    Margin="0,0,0,25"
+                    FontAttributes="Bold"
+                    FontSize="90"
+                    HorizontalOptions="Center"
+                    Text="00:00"
+                    TextColor="{StaticResource LightFG}" />
+
+                <ProgressBar
+                    x:Name="ProgressBar"
+                    Opacity="0"
+                    Progress="0"
+                    ProgressColor="{StaticResource LightFG}" />
+                <Label
+                    x:Name="CurrentCycle"
+                    Margin="0,25,0,0"
+                    FontAttributes="Italic"
+                    FontSize="50"
+                    HorizontalOptions="Center"
+                    Text="Press Start"
+                    TextColor="{StaticResource DarkFG}" />
+            </StackLayout>
+        </Frame>
+
+        <FlexLayout
+            AlignItems="Center"
+            Direction="Row"
+            JustifyContent="SpaceEvenly"
+            VerticalOptions="EndAndExpand">
+
+            <Button
+                Clicked="Exit_Clicked"
+                Style="{StaticResource ButtonStyle}"
+                Text="Exit" />
+            <Button
+                x:Name="PauseResume"
+                Clicked="PauseResume_Clicked"
+                Style="{StaticResource TimeButtonStyle}"
+                Text="Start" />
+            <Button
+                Clicked="Reset_Clicked"
+                Style="{StaticResource ButtonStyle}"
+                Text="Reset" />
+        </FlexLayout>
+
+    </StackLayout>
+</ContentPage>
+

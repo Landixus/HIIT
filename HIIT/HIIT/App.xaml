@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="HIIT.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="BG">#373d47</Color>
+            <Color x:Key="DarkBG">#2d333b</Color>
+
+            <Color x:Key="LightFG">#ffffff</Color>
+            <Color x:Key="DarkFG">#C8C8C8</Color>
+            <Color x:Key="FG">#dae0e5</Color>
+
+
+            <Color x:Key="WarmUp">#636C7A</Color>
+            <Color x:Key="Work">#E74856</Color>
+            <Color x:Key="Rest">#00CC6A</Color>
+            <Color x:Key="CoolDown">#636C7A</Color>
+
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="Margin" Value="0,0,0,25" />
+                <Setter Property="HeightRequest" Value="75" />
+                <Setter Property="WidthRequest" Value="75" />
+                <Setter Property="BorderRadius" Value="100" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderColor" Value="{StaticResource FG}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBG}" />
+                <Setter Property="TextColor" Value="{StaticResource LightFG}" />
+            </Style>
+
+            <Style
+                x:Key="TimeButtonStyle"
+                BasedOn="{StaticResource ButtonStyle}"
+                TargetType="Button">
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBG}" />
+            </Style>
+
+            <Style x:Key="TimeStepperStyle" TargetType="Button">
+
+                <Setter Property="WidthRequest" Value="55" />
+                <Setter Property="HeightRequest" Value="55" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderColor" Value="{StaticResource FG}" />
+                <Setter Property="TextColor" Value="{StaticResource FG}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBG}" />
+            </Style>
+
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
