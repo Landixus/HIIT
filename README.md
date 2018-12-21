@@ -10,3 +10,12 @@ Allows customization of
 - Number of Rounds
 
 Shows the time remaining per phase and total time.
+
+
+![](./images/main.png)
+
+![](./images/start.png)
+
+![](./images/work.png)
+
+![](./images/rest.png)
